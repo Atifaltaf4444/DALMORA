@@ -36,6 +36,9 @@ function closeFaqs() {
 function notify() {
   document.querySelector("#notify-dot").style.display = "flex";
 }
+function notify() {
+  document.querySelector("#notify-dot2").style.display = "flex";
+}
 
 /*--===========================================================
                  NOTIFY SECTION END
@@ -56,24 +59,28 @@ function closeCart() {
 function addProduct() {
   document.querySelector(".cart-box").style.display = "flex";
   document.querySelector("#notify-dot").style.display = "flex";
+  document.querySelector("#notify-dot2").style.display = "flex";
   document.querySelector(".empty-text").style.display = "none";
   document.querySelector(".btn-goCart").style.display = "none";
 }
 function removeProduct() {
   document.querySelector(".cart-box").style.display = "none";
   document.querySelector("#notify-dot").style.display = "none";
+  document.querySelector("#notify-dot2").style.display = "none";
   document.querySelector(".empty-text").style.display = "flex";
   document.querySelector(".btn-goCart").style.display = "flex";
 }
 
 function addProductt() {
   document.querySelector(".cart-boxx").style.display = "flex";
+  document.querySelector("#notify-dot2").style.display = "flex";
   document.querySelector("#notify-dot").style.display = "flex";
   document.querySelector(".empty-text").style.display = "none";
   document.querySelector(".btn-goCart").style.display = "none";
 }
 function removeProductt() {
   document.querySelector(".cart-boxx").style.display = "none";
+  document.querySelector("#notify-dot2").style.display = "none";
   document.querySelector("#notify-dot").style.display = "none";
   document.querySelector(".empty-text").style.display = "flex";
   document.querySelector(".btn-goCart").style.display = "flex";
@@ -81,6 +88,7 @@ function removeProductt() {
 
 function addProducts() {
   document.querySelector(".cart-box3").style.display = "flex";
+  document.querySelector("#notify-dot2").style.display = "flex";
   document.querySelector("#notify-dot").style.display = "flex";
   document.querySelector(".empty-text").style.display = "none";
   document.querySelector(".btn-goCart").style.display = "none";
@@ -88,6 +96,7 @@ function addProducts() {
 function removeProducts() {
   document.querySelector(".cart-box3").style.display = "none";
   document.querySelector("#notify-dot").style.display = "none";
+  document.querySelector("#notify-dot2").style.display = "none";
   document.querySelector(".empty-text").style.display = "flex";
   document.querySelector(".btn-goCart").style.display = "flex";
 }
@@ -95,12 +104,14 @@ function removeProducts() {
 function addProductts() {
   document.querySelector(".cart-box2").style.display = "flex";
   document.querySelector("#notify-dot").style.display = "flex";
+  document.querySelector("#notify-dot2").style.display = "flex";
   document.querySelector(".empty-text").style.display = "none";
   document.querySelector(".btn-goCart").style.display = "none";
 }
 function removeProductts() {
   document.querySelector(".cart-box2").style.display = "none";
   document.querySelector("#notify-dot").style.display = "none";
+  document.querySelector("#notify-dot2").style.display = "none";
   document.querySelector(".empty-text").style.display = "flex";
   document.querySelector(".btn-goCart").style.display = "flex";
 }
@@ -112,6 +123,7 @@ function buyPopup() {
   document.querySelector(".cart-boxx").style.display = "none";
   document.querySelector(".cart-box").style.display = "none";
   document.querySelector("#notify-dot").style.display = "none";
+  document.querySelector("#notify-dot2").style.display = "none";
   document.querySelector(".empty-text").style.display = "flex";
   document.querySelector(".btn-goCart").style.display = "flex";
 }

@@ -101,6 +101,17 @@ html {
   transform: scale(3.9);
 }
 
+#notify-dot2 {
+  color: rgb(241, 0, 0);
+  font-size: 12px;
+  position: relative;
+  top: -26px;
+  right: -102px;
+  z-index: 9999;
+  display: flex;
+  text-decoration: none;
+}
+
 /*==================SIDEBAR START===============*/
 .sidebar-main {
   background-color: rgb(219, 219, 187);
@@ -1168,7 +1179,7 @@ html {
 
   .nav2 ul li a {
     color: black;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     transition: 0.3s ease-in-out;
   }
@@ -1190,6 +1201,85 @@ html {
     flex-direction: column;
     align-items: center;
   }
+
+  .sidebar-main {
+    background-color: rgb(219, 219, 187);
+    height: 140vh;
+    width: 350px;
+    display: none;
+    position: absolute;
+    top: -12px;
+    z-index: 220;
+    transition: 0.5s ease-in-out;
+  }
+
+  .sidebar {
+    display: block;
+    margin-top: 20px;
+    margin-left: 35px;
+  }
+  .sidebar ul li {
+    list-style: none;
+  }
+  .sidebar ul li a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 13px 180px 13px 20px;
+    font-size: 14px;
+    font-family: "poppins";
+  }
+  .sidebar ul li a:hover {
+    background-color: rgba(255, 228, 196, 0.326);
+    margin-left: -20px;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: -40px;
+    padding-bottom: 10px;
+    background-color: rgb(230, 230, 196);
+    padding-left: 30px;
+  }
+
+  .side-cart {
+    position: fixed;
+    right: 406px;
+    top: 0;
+    width: 330px;
+    height: 100vh;
+    background-color: beige;
+    box-shadow: -2px 0 10px rgb(0, 0, 0, 0.1);
+    padding: 65px 20px 40px;
+    z-index: 300;
+    overflow: auto;
+    transition: 0.5s;
+    display: none;
+  }
+  .buy-popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "poppins";
+    border: 2px solid rgb(35, 101, 80);
+    border-radius: 20px;
+    width: 310px;
+    position: relative;
+    top: -270px;
+    left: 5px;
+    z-index: 402;
+    background-color: beige;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .buy-popup h2 {
+    font-size: 14px;
+    text-align: center;
+  }
+
   .cards {
     margin-top: 50px;
     display: inline-block;
