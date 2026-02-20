@@ -1263,14 +1263,14 @@ html {
 
   .side-cart {
     position: fixed;
-    right: 406px;
+    right: 0;
     top: 0;
     width: 330px;
     height: 100vh;
     background-color: beige;
     box-shadow: -2px 0 10px rgb(0, 0, 0, 0.1);
     padding: 65px 20px 40px;
-    z-index: 300;
+    z-index: 210;
     overflow: auto;
     transition: 0.5s;
     display: none;
