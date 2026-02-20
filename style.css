@@ -108,7 +108,7 @@ html {
   top: -26px;
   right: -102px;
   z-index: 9999;
-  display: flex;
+  display: none;
   text-decoration: none;
 }
 
@@ -601,15 +601,29 @@ html {
 
 .customer-slide {
   background-color: beige;
-  margin-top: 40px;
+  margin-top: 10px;
   display: flex;
+  width: 100%;
+  margin: 100px auto;
+  padding-bottom: 50px;
+
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
   justify-content: space-evenly;
 }
 .customer-slide2 {
   background-color: beige;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
+  margin: 100px auto;
+  padding-bottom: 50px;
+
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .review p {
@@ -622,6 +636,7 @@ html {
   font-size: 14px;
   box-shadow: 0 8px 100px #adadad;
   animation: continue 17s linear infinite;
+  margin-top: 20px;
 }
 
 .review2 p {
@@ -634,6 +649,7 @@ html {
   font-size: 14px;
   box-shadow: 0 8px 100px #adadad;
   animation: continuee 8s linear infinite;
+  margin-top: 20px;
 }
 @keyframes continuee {
   0% {
@@ -880,6 +896,7 @@ html {
 /*============================================
        CORE VALUE SECTION START
 =============================================*/
+
 .core-container {
   background-color: beige;
   padding-top: 20px;
