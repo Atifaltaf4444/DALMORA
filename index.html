@@ -1,0 +1,559 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="website icon" type="png" href="Images/1769157689668.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>DALMORA | Quality Dals</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="hero-main-body">
+    <!--================================================
+      HERO NAVBAR & LOGO SECTION START
+======================================================-->
+    <header class="nav-main">
+      <nav class="nav">
+        <ul>
+          <li style="position: relative; left: -550px">
+            <a href="#"><i class="fa fa-bars" onclick="showSidebar()"></i></a>
+          </li>
+          <li style="position: relative; left: -530px">
+            <a href="#"><i class="fa fa-search"></i></a>
+          </li>
+          <li><img src="Images/1769157689668.png" /></li>
+          <li style="position: relative; right: -530px">
+            <a href="register.html"><i class="fa fa-user"></i></a>
+          </li>
+          <li style="position: relative; right: -550px">
+            <a href="#"
+              ><i
+                class="fa fa-shopping-bag"
+                id="cart-icon"
+                onclick="showCart()"
+              ></i
+              ><i class="fa fa-circle" id="notify-dot"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--================================MOBILE NAVBAR SECTION(ONLY MOBILES)=============================================-->
+
+    <header class="nav-main2">
+      <nav class="nav2">
+        <ul>
+          <li style="position: relative;top: -5px;">
+            <a href="#"><i class="fa fa-bars" onclick="showSidebar()"></i></a>
+          </li>
+          <li style="position: relative;top: -5px;left: 10px;">
+            <a href="#"><i class="fa fa-search"></i></a>
+          </li>
+          <li   style="position: relative;top: -5px;left: 40px;"  ><img src="Images/1769157689668.png" /></li>
+          <li  style="position: relative;top: -5px;left: 70px;"          >
+            <a href="register.html"><i class="fa fa-user"></i></a>
+          </li>
+          <li      style="position: relative;top: -5px;left: 80px;"         >
+            <a href="#"
+              ><i
+                class="fa fa-shopping-bag"
+                id="cart-icon"
+                onclick="showCart()"
+              ></i
+              ><i class="fa fa-circle" id="notify-dot"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--========================SIDEBAR START=======================================-->
+    <section class="sidebar-main">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="#" onclick="closeSidebar()"
+              ><i class="fa fa-times" onclick="closeSidebar()"></i
+            ></a>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li onclick="showCart()"><a href="#">Orders</a></li>
+
+          <li><a href="cart.html">Track Your Order</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Terms Of Service</a></li>
+
+          <div class="social-links">
+            <a href="#"
+              ><i class="fa fa-facebook">
+                <span id="socialIcons"> Facebook</span></i
+              ></a
+            >
+            <a href="#"
+              ><i class="fa fa-instagram">
+                <span id="socialIcons"> Instagram</span></i
+              ></a
+            >
+            <a href="#"
+              ><i class="fa fa-whatsapp">
+                <span id="socialIcons"> Whatsapp</span></i
+              ></a
+            >
+            <a href="#"
+              ><i class="fa fa-youtube">
+                <span id="socialIcons"> Youtube</span></i
+              ></a
+            >
+          </div>
+        </ul>
+      </div>
+    </section>
+    <!--========================CART SIDEBAR SECTION================================================-->
+    <section class="side-cart">
+      <h2 class="cart-title">Your Cart</h2>
+      <div class="cart-content">
+        <div class="cart-box">
+          <img src="Images/toor.jpg" class="cart-img" />
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Toor Dal</h2>
+            <span class="cart-price">Rs.499</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="fa fa-trash-o cart-remove" onclick="removeProduct()"></i>
+        </div>
+
+        <div class="cart-boxx">
+          <img src="Images/moong.jpg" class="cart-img" />
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Moong Dal</h2>
+            <span class="cart-price">Rs.299</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="fa fa-trash-o cart-remove" onclick="removeProductt()"></i>
+        </div>
+
+        <div class="cart-box2">
+          <img src="Images/masoor.jpg" class="cart-img" />
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Masoor Dal</h2>
+            <span class="cart-price">Rs.799</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="fa fa-trash-o cart-remove" onclick="removeProductts()"></i>
+        </div>
+
+        <div class="cart-box3">
+          <img src="Images/chana.jpg" class="cart-img" />
+          <div class="cart-detail">
+            <h2 class="cart-product-title">Chana Dal</h2>
+            <span class="cart-price">Rs.599</span>
+            <div class="cart-quantity">
+              <button id="decrement">-</button>
+              <span class="number">1</span>
+              <button id="increment">+</button>
+            </div>
+          </div>
+          <i class="fa fa-trash-o cart-remove" onclick="removeProducts()"></i>
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="empty-text">
+          Your Cart is empty!<br />
+          Shop some products.
+        </div>
+      </div>
+      <div class="buy-now">
+        <a href="#popupp">
+          <button class="btn-buy" onclick="buyPopup()">Buy Now</button></a
+        ><a href="#products"
+          ><button class="btn-goCart">Get Products</button></a
+        >
+      </div>
+      <i class="fa fa-times" id="cart-close" onclick="closeCart()"></i>
+    </section>
+
+    <!--======================SIDEBAR END===================================-->
+    <!--================================================
+      HERO NAVBAR & LOGO SECTION END
+======================================================-->
+
+    <!--================================================
+            SECOND NAVBAR START
+======================================================-->
+    <div class="second-nav">
+      <div class="slide-text">
+        <span>Sale is now live.</span>
+        <span> Get 30% off on first order.</span>
+        <span> Free Shipping on Prepaid Orders.</span>
+      </div>
+    </div>
+
+    <!--================================================
+            SECOND NAVBAR END
+======================================================-->
+
+    <!---========================================
+      MAIN CONTENT  SECTION START
+===========================================-->
+
+    <div class="sliding-cards"></div>
+    <div class="buy-popup" id="popupp">
+      <i class="fa fa-check-circle"></i>
+      <h2>Thank You! For Purchasing.</h2>
+      <p>Your Order will arrive soon!</p>
+      <button onclick="removePopup()">Done</button>
+    </div>
+
+    <!---========================================
+      PRODUCT CONTENT  SECTION START
+===========================================-->
+
+    <div class="product-main">
+      <h1>Our Products</h1>
+      <div class="products">
+        <div class="cards" id="products">
+          <img src="Images/toor.jpg" />
+          <h3>Toor Dal</h3>
+          <div id="card-text">
+            <p>&#x20B9;799.00</p>
+            <span style="margin-left: 20px; text-decoration: none">
+              &#x20B9;499.00</span
+            >
+          </div>
+          <a href="#" class="add-cart" onclick="addProduct()"
+            ><h2 class="add-cart" onclick="addProduct()">Add to Cart</h2></a
+          >
+        </div>
+
+        <div class="cards">
+          <img src="Images/chana.jpg" />
+          <h3>Chana Dal</h3>
+          <div id="card-text">
+            <p>&#x20B9;699.00</p>
+            <span style="margin-left: 20px; text-decoration: none">
+              &#x20B9;599.00</span
+            >
+          </div>
+          <a href="#" class="add-cart" onclick="addProducts()"
+            ><h2 class="add-cart" onclick="addProducts()">Add to Cart</h2></a
+          >
+        </div>
+
+        <div class="cards">
+          <img src="Images/masoor.jpg" />
+          <h3>Masoor Dal</h3>
+          <div id="card-text">
+            <p>&#x20B9;999.00</p>
+            <span style="margin-left: 20px; text-decoration: none">
+              &#x20B9;799.00</span
+            >
+          </div>
+          <a href="#" class="add-cart" onclick="addProductts()"
+            ><h2 class="add-cart" onclick="addProductts()">Add to Cart</h2></a
+          >
+        </div>
+
+        <div class="cards">
+          <img src="Images/moong.jpg" />
+          <h3>Moong Dal</h3>
+          <div id="card-text">
+            <p>&#x20B9;499.00</p>
+            <span style="margin-left: 20px; text-decoration: none">
+              &#x20B9;299.00</span
+            >
+          </div>
+          <a href="#" class="add-cart" onclick="addProductt()"
+            ><h2 class="add-cart" onclick="addProductt()">Add to Cart</h2></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!---========================================
+      PRODUCT CONTENT  SECTION END
+===========================================-->
+
+    <!---========================================
+      CUSTOMER CONTENT  SECTION START
+===========================================-->
+
+    <section class="customer-review-main">
+      <h2>Our Customers<span> Love </span> our Dal</h2>
+      <div class="customer-slide">
+        <div class="review">
+          <p>Ordered again within a week!</p>
+        </div>
+        <div class="review">
+          <p>Fresh, aromatic and not oily at all</p>
+        </div>
+
+        <div class="review">
+          <p>Reminded me of my village</p>
+        </div>
+
+        <div class="review">
+          <p>Packaging is great!</p>
+        </div>
+      </div>
+      <div class="customer-slide2">
+        <div class="review2">
+          <p>My parents loved it!</p>
+        </div>
+        <div class="review2">
+          <p>Great with evening tea</p>
+        </div>
+
+        <div class="review2">
+          <p>Best quality dals</p>
+        </div>
+      </div>
+    </section>
+
+    <!---========================================
+      CUSTOMER CONTENT  SECTION END
+===========================================-->
+
+    <!---========================================
+       AVAILABILITY  SECTION START
+===========================================-->
+    <section class="market-main">
+      <h1>Available Across India</h1>
+      <p>Trusted marketplaces where you can buy Dalmora</p>
+      <div class="market">
+        <div class="market-places">
+          <img src="Images/amazon.png" />
+          <img src="Images/flipkart.png" />
+          <img src="Images/meesho.avif" />
+        </div>
+      </div>
+    </section>
+    <!---========================================
+       AVAILABILITY  SECTION END
+===========================================-->
+
+    <!---========================================
+       STORY  SECTION START
+===========================================-->
+
+    <section class="story-main">
+      <div class="story-intro">
+        <p>Our Story</p>
+        <h1>From Craving to Purpose</h1>
+        <span
+          >The journey of Dalmora began with a simple craving during Eid.<br />
+          What started as a search for hygiene became a mission for
+          purity.</span
+        >
+      </div>
+      <div class="story-card">
+        <img src="Images/founder.jpg" width="230px" />
+        <h3>Founder</h3>
+        <p>Vision & Growth</p>
+        <a href="https://github.com/atifaltaf4444"
+          ><i class="fa fa-github"></i
+        ></a>
+      </div>
+      <div class="story">
+        <div class="storyCards">
+          <h2>01</h2>
+          <h3>The Beginning</h3>
+          <p>
+            At just 16, a personal experience sparked the vision of hygienic
+            traditional food.
+          </p>
+        </div>
+
+        <div class="storyCards">
+          <h2>02</h2>
+          <h3>Today & Beyond</h3>
+          <p>
+            Growing steadily as a trusted name in traditional snacks for
+            health-conscious lovers.
+          </p>
+        </div>
+      </div>
+      <div class="readmore">
+        <a href="#" id="full-story">Read Our Full Story</a>
+        <span id="exp"><a href="products.html">Experience the Taste</a></span>
+      </div>
+    </section>
+
+    <!---========================================
+       STORY  SECTION END
+===========================================-->
+
+    <!---========================================
+       CORE VALUE SECTION START
+===========================================-->
+
+    <div class="core-container">
+      <h1>Our Core Values</h1>
+      <p>The principles that guide everything we create at Dalmora.</p>
+
+      <div class="core-values">
+        <div class="core-cards">
+          <span><i class="fa fa-check"></i></span>
+          <h2>Sustainability</h2>
+          <h3>Responsibly sourced ingredients and eco-friendly packaging.</h3>
+        </div>
+
+        <div class="core-cards">
+          <span><i class="fa fa-anchor"></i></span>
+          <h2>Uncompromised Quality</h2>
+
+          <h3>Premium ingredients with strict quality checks.</h3>
+        </div>
+
+        <div class="core-cards">
+          <span><i class="fa fa-heart"></i></span>
+          <h2>Health First</h2>
+          <h3>No artificial colors, flavors, or preservatives.</h3>
+        </div>
+
+        <div class="core-cards">
+          <span><i class="fa fa-users"></i></span>
+          <h2>Community Driven</h2>
+          <h3>Supporting farmers and growing together.</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--================================================
+            FAQ'S SECTION START
+======================================================-->
+
+    <section class="faq-main">
+      <div class="faqs">
+        <h2>FAQ'S</h2>
+        <select id="faq-options">
+          <option id="faq-options">Q. What is Dalmora</option>
+          <option id="faq-options">Ans. Dalmora is a Dal brand</option>
+        </select>
+
+        <select id="faq-options">
+          <option id="faq-options">Q. What is the Return Policy</option>
+          <option id="faq-options">
+            Ans. At Dalmora, we're dedicated to<br />
+            making you love every purchase. If something isn't quite right,<br />
+            don't worry - we've designed a simple and<br />
+            stress-free return process just for you.
+          </option>
+        </select>
+
+        <select id="faq-options">
+          <option id="faq-options">Q. Is it safe?</option>
+          <option id="faq-options">
+            Ans. Yes. our first priority is to keep people safe and healthy.
+          </option>
+        </select>
+
+        <select id="faq-options">
+          <option id="faq-options">Q. Are the products real?</option>
+          <option id="faq-options">
+            Ans. Yes. All Dalmora dal products are real and healthy.
+          </option>
+        </select>
+      </div>
+    </section>
+    <div class="faq-popup" onclick="showFaqs()">
+      <i class="fa fa-commenting" onclick="showFaqs()">Faq's</i>
+    </div>
+
+    <div class="faq-popup2" onclick="closeFaqs()">
+      <i class="fa fa-times" onclick="closeFaqs()"></i>
+    </div>
+
+    <!--================================================
+            FAQ'S SECTION END
+======================================================-->
+
+    <!--=====================================================
+          HERO FOOTER SECTION START
+========================================================-->
+    <footer class="hero-footer-main">
+      <div class="links">
+        <h2>Dalmora</h2>
+        <p>
+          Authentic and pure products delivered to your doorstep.<br />
+          Experience the true taste of tradition.
+        </p>
+        <span
+          ><a href="#"> <i class="fa fa-whatsapp"></i> </a>
+          <a href="#"> <i class="fa fa-facebook"></i> </a>
+          <a href="#"> <i class="fa fa-instagram"></i> </a>
+        </span>
+      </div>
+
+      <div class="links2">
+        <h2>Quick Links</h2>
+
+        <a href="#"> Track Order</a>
+        <a href="#"> Return & Refund Policy </a>
+        <a href="#"> Faq</a>
+        <a href="#"> Privacy Policy</a>
+      </div>
+
+      <div class="links2">
+        <h2>Company</h2>
+
+        <a href="#"> Our Story</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="links4">
+        <h2>Get In Touch</h2>
+        <i class="fa fa-map-marker"> <p>Srinagar, Bemina,190018</p></i>
+        <i class="fa fa-phone"> <p>8061-8061-811</p></i>
+
+        <i class="fa fa-envelope">
+          <p>
+            <a href="mailto:atifaltaf4444@gmail.com">contact@dalmora.shop</a>
+          </p></i
+        >
+      </div>
+    </footer>
+    <div class="rights">
+      <p>&copy;2026 DALMORA. All Rights Reserved.</p>
+    </div>
+
+    <!--======================JAVASCRIPT START===================================-->
+    <script src="script.js"></script>
+    <!--======================JAVASCRIPT END===================================-->
+  </body>
+</html>
